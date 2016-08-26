@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoUpdate", "AutoUpdate\AutoUpdate.csproj", "{AFAED7F5-0379-4CEF-8E15-7541B62D391A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoUpdateClient", "AutoUpdate\AutoUpdateClient.csproj", "{AFAED7F5-0379-4CEF-8E15-7541B62D391A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -19,7 +19,7 @@ namespace AutoUpdate
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            labelTime.Alignment = ToolStripItemAlignment.Right;
         }
 
         private void label1_Click(object sender, EventArgs e)
