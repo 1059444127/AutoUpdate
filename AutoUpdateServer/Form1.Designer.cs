@@ -40,36 +40,37 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBoxControl = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.buttonPublish = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.buttonUpdateLog = new System.Windows.Forms.Button();
             this.buttonLatest = new System.Windows.Forms.Button();
-            this.buttonPublish = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBoxGitBashList = new System.Windows.Forms.TextBox();
             this.textBoxGitInput = new System.Windows.Forms.TextBox();
+            this.textBoxGitBashList = new System.Windows.Forms.TextBox();
             this.tabPageRepair = new System.Windows.Forms.TabPage();
-            this.dataGridViewRepairFiles = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.buttonRepairCheck = new System.Windows.Forms.Button();
-            this.buttonRepairSelect = new System.Windows.Forms.Button();
             this.buttonRepair = new System.Windows.Forms.Button();
+            this.buttonRepairSelect = new System.Windows.Forms.Button();
+            this.buttonRepairCheck = new System.Windows.Forms.Button();
+            this.dataGridViewRepairFiles = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPageSource = new System.Windows.Forms.TabPage();
-            this.listBoxSource = new System.Windows.Forms.ListBox();
-            this.buttonApplyUpdateSource = new System.Windows.Forms.Button();
-            this.labelUpdateSource = new System.Windows.Forms.Label();
             this.buttonGetUpdateSource = new System.Windows.Forms.Button();
+            this.labelUpdateSource = new System.Windows.Forms.Label();
+            this.buttonApplyUpdateSource = new System.Windows.Forms.Button();
+            this.listBoxSource = new System.Windows.Forms.ListBox();
             this.tabPageFiles = new System.Windows.Forms.TabPage();
-            this.dataGridViewModifyFiles = new System.Windows.Forms.DataGridView();
-            this.ColumnSavetime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnNowtime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnFilename = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.buttonStartUpdate = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.labelUpdateConfirm = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.buttonStartUpdate = new System.Windows.Forms.Button();
+            this.dataGridViewModifyFiles = new System.Windows.Forms.DataGridView();
+            this.ColumnFilename = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnNowtime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnSavetime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.buttonInit = new System.Windows.Forms.Button();
             label2 = new System.Windows.Forms.Label();
             this.groupBoxVersion.SuspendLayout();
             this.groupBoxVersionList.SuspendLayout();
@@ -83,6 +84,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewModifyFiles)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new System.Drawing.Point(165, 8);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(77, 12);
+            label2.TabIndex = 3;
+            label2.Text = "当前更新源：";
             // 
             // groupBoxVersion
             // 
@@ -197,6 +207,7 @@
             // 
             this.groupBoxControl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxControl.BackColor = System.Drawing.Color.Transparent;
+            this.groupBoxControl.Controls.Add(this.buttonInit);
             this.groupBoxControl.Controls.Add(this.button3);
             this.groupBoxControl.Controls.Add(this.buttonPublish);
             this.groupBoxControl.Controls.Add(this.button1);
@@ -209,6 +220,25 @@
             this.groupBoxControl.TabIndex = 11;
             this.groupBoxControl.TabStop = false;
             this.groupBoxControl.Text = "操作面板";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(165, 46);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(99, 23);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "更改存储库路径";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // buttonPublish
+            // 
+            this.buttonPublish.Location = new System.Drawing.Point(165, 17);
+            this.buttonPublish.Name = "buttonPublish";
+            this.buttonPublish.Size = new System.Drawing.Size(75, 23);
+            this.buttonPublish.TabIndex = 3;
+            this.buttonPublish.Text = "发布新版本";
+            this.buttonPublish.UseVisualStyleBackColor = true;
+            this.buttonPublish.Click += new System.EventHandler(this.buttonPublish_Click);
             // 
             // button1
             // 
@@ -237,24 +267,6 @@
             this.buttonLatest.Text = "更新/回退到选定版本";
             this.buttonLatest.UseVisualStyleBackColor = true;
             // 
-            // buttonPublish
-            // 
-            this.buttonPublish.Location = new System.Drawing.Point(165, 17);
-            this.buttonPublish.Name = "buttonPublish";
-            this.buttonPublish.Size = new System.Drawing.Size(75, 23);
-            this.buttonPublish.TabIndex = 3;
-            this.buttonPublish.Text = "发布新版本";
-            this.buttonPublish.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(165, 46);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(99, 23);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "更改存储库路径";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -269,6 +281,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Git bash";
             // 
+            // textBoxGitInput
+            // 
+            this.textBoxGitInput.Location = new System.Drawing.Point(6, 127);
+            this.textBoxGitInput.Name = "textBoxGitInput";
+            this.textBoxGitInput.Size = new System.Drawing.Size(575, 21);
+            this.textBoxGitInput.TabIndex = 1;
+            // 
             // textBoxGitBashList
             // 
             this.textBoxGitBashList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -280,13 +299,6 @@
             this.textBoxGitBashList.Size = new System.Drawing.Size(575, 101);
             this.textBoxGitBashList.TabIndex = 0;
             // 
-            // textBoxGitInput
-            // 
-            this.textBoxGitInput.Location = new System.Drawing.Point(6, 127);
-            this.textBoxGitInput.Name = "textBoxGitInput";
-            this.textBoxGitInput.Size = new System.Drawing.Size(575, 21);
-            this.textBoxGitInput.TabIndex = 1;
-            // 
             // tabPageRepair
             // 
             this.tabPageRepair.Controls.Add(this.buttonRepair);
@@ -295,10 +307,37 @@
             this.tabPageRepair.Controls.Add(this.dataGridViewRepairFiles);
             this.tabPageRepair.Location = new System.Drawing.Point(4, 22);
             this.tabPageRepair.Name = "tabPageRepair";
-            this.tabPageRepair.Size = new System.Drawing.Size(411, 167);
+            this.tabPageRepair.Size = new System.Drawing.Size(411, 130);
             this.tabPageRepair.TabIndex = 2;
             this.tabPageRepair.Text = "修复";
             this.tabPageRepair.UseVisualStyleBackColor = true;
+            // 
+            // buttonRepair
+            // 
+            this.buttonRepair.Location = new System.Drawing.Point(161, 3);
+            this.buttonRepair.Name = "buttonRepair";
+            this.buttonRepair.Size = new System.Drawing.Size(88, 23);
+            this.buttonRepair.TabIndex = 4;
+            this.buttonRepair.Text = "修复选中文件";
+            this.buttonRepair.UseVisualStyleBackColor = true;
+            // 
+            // buttonRepairSelect
+            // 
+            this.buttonRepairSelect.Location = new System.Drawing.Point(80, 3);
+            this.buttonRepairSelect.Name = "buttonRepairSelect";
+            this.buttonRepairSelect.Size = new System.Drawing.Size(75, 23);
+            this.buttonRepairSelect.TabIndex = 3;
+            this.buttonRepairSelect.Text = "全选/取消";
+            this.buttonRepairSelect.UseVisualStyleBackColor = true;
+            // 
+            // buttonRepairCheck
+            // 
+            this.buttonRepairCheck.Location = new System.Drawing.Point(0, 3);
+            this.buttonRepairCheck.Name = "buttonRepairCheck";
+            this.buttonRepairCheck.Size = new System.Drawing.Size(75, 23);
+            this.buttonRepairCheck.TabIndex = 2;
+            this.buttonRepairCheck.Text = "扫描文件";
+            this.buttonRepairCheck.UseVisualStyleBackColor = true;
             // 
             // dataGridViewRepairFiles
             // 
@@ -317,47 +356,20 @@
             this.dataGridViewRepairFiles.Size = new System.Drawing.Size(411, 138);
             this.dataGridViewRepairFiles.TabIndex = 1;
             // 
-            // dataGridViewTextBoxColumn3
+            // dataGridViewTextBoxColumn1
             // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "库中修改时间";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn1.HeaderText = "文件名";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.HeaderText = "当前修改时间";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
-            // dataGridViewTextBoxColumn1
+            // dataGridViewTextBoxColumn3
             // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "文件名";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // buttonRepairCheck
-            // 
-            this.buttonRepairCheck.Location = new System.Drawing.Point(0, 3);
-            this.buttonRepairCheck.Name = "buttonRepairCheck";
-            this.buttonRepairCheck.Size = new System.Drawing.Size(75, 23);
-            this.buttonRepairCheck.TabIndex = 2;
-            this.buttonRepairCheck.Text = "扫描文件";
-            this.buttonRepairCheck.UseVisualStyleBackColor = true;
-            // 
-            // buttonRepairSelect
-            // 
-            this.buttonRepairSelect.Location = new System.Drawing.Point(80, 3);
-            this.buttonRepairSelect.Name = "buttonRepairSelect";
-            this.buttonRepairSelect.Size = new System.Drawing.Size(75, 23);
-            this.buttonRepairSelect.TabIndex = 3;
-            this.buttonRepairSelect.Text = "全选/取消";
-            this.buttonRepairSelect.UseVisualStyleBackColor = true;
-            // 
-            // buttonRepair
-            // 
-            this.buttonRepair.Location = new System.Drawing.Point(161, 3);
-            this.buttonRepair.Name = "buttonRepair";
-            this.buttonRepair.Size = new System.Drawing.Size(88, 23);
-            this.buttonRepair.TabIndex = 4;
-            this.buttonRepair.Text = "修复选中文件";
-            this.buttonRepair.UseVisualStyleBackColor = true;
+            this.dataGridViewTextBoxColumn3.HeaderText = "库中修改时间";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
             // tabPageSource
             // 
@@ -369,10 +381,37 @@
             this.tabPageSource.Location = new System.Drawing.Point(4, 22);
             this.tabPageSource.Name = "tabPageSource";
             this.tabPageSource.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageSource.Size = new System.Drawing.Size(411, 167);
+            this.tabPageSource.Size = new System.Drawing.Size(411, 130);
             this.tabPageSource.TabIndex = 1;
             this.tabPageSource.Text = "更新源";
             this.tabPageSource.UseVisualStyleBackColor = true;
+            // 
+            // buttonGetUpdateSource
+            // 
+            this.buttonGetUpdateSource.Location = new System.Drawing.Point(0, 3);
+            this.buttonGetUpdateSource.Name = "buttonGetUpdateSource";
+            this.buttonGetUpdateSource.Size = new System.Drawing.Size(61, 23);
+            this.buttonGetUpdateSource.TabIndex = 4;
+            this.buttonGetUpdateSource.Text = "拉取列表";
+            this.buttonGetUpdateSource.UseVisualStyleBackColor = true;
+            // 
+            // labelUpdateSource
+            // 
+            this.labelUpdateSource.AutoSize = true;
+            this.labelUpdateSource.Location = new System.Drawing.Point(248, 8);
+            this.labelUpdateSource.Name = "labelUpdateSource";
+            this.labelUpdateSource.Size = new System.Drawing.Size(17, 12);
+            this.labelUpdateSource.TabIndex = 2;
+            this.labelUpdateSource.Text = "无";
+            // 
+            // buttonApplyUpdateSource
+            // 
+            this.buttonApplyUpdateSource.Location = new System.Drawing.Point(62, 3);
+            this.buttonApplyUpdateSource.Name = "buttonApplyUpdateSource";
+            this.buttonApplyUpdateSource.Size = new System.Drawing.Size(97, 23);
+            this.buttonApplyUpdateSource.TabIndex = 1;
+            this.buttonApplyUpdateSource.Text = "改用所选更新源";
+            this.buttonApplyUpdateSource.UseVisualStyleBackColor = true;
             // 
             // listBoxSource
             // 
@@ -385,42 +424,6 @@
             this.listBoxSource.Name = "listBoxSource";
             this.listBoxSource.Size = new System.Drawing.Size(411, 136);
             this.listBoxSource.TabIndex = 0;
-            // 
-            // buttonApplyUpdateSource
-            // 
-            this.buttonApplyUpdateSource.Location = new System.Drawing.Point(62, 3);
-            this.buttonApplyUpdateSource.Name = "buttonApplyUpdateSource";
-            this.buttonApplyUpdateSource.Size = new System.Drawing.Size(97, 23);
-            this.buttonApplyUpdateSource.TabIndex = 1;
-            this.buttonApplyUpdateSource.Text = "改用所选更新源";
-            this.buttonApplyUpdateSource.UseVisualStyleBackColor = true;
-            // 
-            // labelUpdateSource
-            // 
-            this.labelUpdateSource.AutoSize = true;
-            this.labelUpdateSource.Location = new System.Drawing.Point(248, 8);
-            this.labelUpdateSource.Name = "labelUpdateSource";
-            this.labelUpdateSource.Size = new System.Drawing.Size(17, 12);
-            this.labelUpdateSource.TabIndex = 2;
-            this.labelUpdateSource.Text = "无";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(165, 8);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(77, 12);
-            label2.TabIndex = 3;
-            label2.Text = "当前更新源：";
-            // 
-            // buttonGetUpdateSource
-            // 
-            this.buttonGetUpdateSource.Location = new System.Drawing.Point(0, 3);
-            this.buttonGetUpdateSource.Name = "buttonGetUpdateSource";
-            this.buttonGetUpdateSource.Size = new System.Drawing.Size(61, 23);
-            this.buttonGetUpdateSource.TabIndex = 4;
-            this.buttonGetUpdateSource.Text = "拉取列表";
-            this.buttonGetUpdateSource.UseVisualStyleBackColor = true;
             // 
             // tabPageFiles
             // 
@@ -435,6 +438,35 @@
             this.tabPageFiles.TabIndex = 0;
             this.tabPageFiles.Text = "涉及文件列表";
             this.tabPageFiles.UseVisualStyleBackColor = true;
+            // 
+            // labelUpdateConfirm
+            // 
+            this.labelUpdateConfirm.AutoSize = true;
+            this.labelUpdateConfirm.Location = new System.Drawing.Point(0, 3);
+            this.labelUpdateConfirm.Name = "labelUpdateConfirm";
+            this.labelUpdateConfirm.Size = new System.Drawing.Size(245, 12);
+            this.labelUpdateConfirm.TabIndex = 3;
+            this.labelUpdateConfirm.Text = "本次更新后，版本号将从0变更为0，请确认：";
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.Location = new System.Drawing.Point(360, 69);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(48, 48);
+            this.button2.TabIndex = 2;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // buttonStartUpdate
+            // 
+            this.buttonStartUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonStartUpdate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonStartUpdate.BackgroundImage")));
+            this.buttonStartUpdate.Location = new System.Drawing.Point(360, 10);
+            this.buttonStartUpdate.Name = "buttonStartUpdate";
+            this.buttonStartUpdate.Size = new System.Drawing.Size(48, 48);
+            this.buttonStartUpdate.TabIndex = 1;
+            this.buttonStartUpdate.UseVisualStyleBackColor = true;
             // 
             // dataGridViewModifyFiles
             // 
@@ -453,49 +485,20 @@
             this.dataGridViewModifyFiles.Size = new System.Drawing.Size(357, 112);
             this.dataGridViewModifyFiles.TabIndex = 0;
             // 
-            // ColumnSavetime
+            // ColumnFilename
             // 
-            this.ColumnSavetime.HeaderText = "库中修改时间";
-            this.ColumnSavetime.Name = "ColumnSavetime";
+            this.ColumnFilename.HeaderText = "文件名";
+            this.ColumnFilename.Name = "ColumnFilename";
             // 
             // ColumnNowtime
             // 
             this.ColumnNowtime.HeaderText = "当前修改时间";
             this.ColumnNowtime.Name = "ColumnNowtime";
             // 
-            // ColumnFilename
+            // ColumnSavetime
             // 
-            this.ColumnFilename.HeaderText = "文件名";
-            this.ColumnFilename.Name = "ColumnFilename";
-            // 
-            // buttonStartUpdate
-            // 
-            this.buttonStartUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonStartUpdate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonStartUpdate.BackgroundImage")));
-            this.buttonStartUpdate.Location = new System.Drawing.Point(360, 10);
-            this.buttonStartUpdate.Name = "buttonStartUpdate";
-            this.buttonStartUpdate.Size = new System.Drawing.Size(48, 48);
-            this.buttonStartUpdate.TabIndex = 1;
-            this.buttonStartUpdate.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.Location = new System.Drawing.Point(360, 69);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(48, 48);
-            this.button2.TabIndex = 2;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // labelUpdateConfirm
-            // 
-            this.labelUpdateConfirm.AutoSize = true;
-            this.labelUpdateConfirm.Location = new System.Drawing.Point(0, 3);
-            this.labelUpdateConfirm.Name = "labelUpdateConfirm";
-            this.labelUpdateConfirm.Size = new System.Drawing.Size(245, 12);
-            this.labelUpdateConfirm.TabIndex = 3;
-            this.labelUpdateConfirm.Text = "本次更新后，版本号将从0变更为0，请确认：";
+            this.ColumnSavetime.HeaderText = "库中修改时间";
+            this.ColumnSavetime.Name = "ColumnSavetime";
             // 
             // tabControl1
             // 
@@ -511,6 +514,16 @@
             this.tabControl1.Size = new System.Drawing.Size(419, 156);
             this.tabControl1.TabIndex = 9;
             // 
+            // buttonInit
+            // 
+            this.buttonInit.Location = new System.Drawing.Point(165, 75);
+            this.buttonInit.Name = "buttonInit";
+            this.buttonInit.Size = new System.Drawing.Size(86, 23);
+            this.buttonInit.TabIndex = 5;
+            this.buttonInit.Text = "初始化存储库";
+            this.buttonInit.UseVisualStyleBackColor = true;
+            this.buttonInit.Click += new System.EventHandler(this.buttonInit_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -525,6 +538,7 @@
             this.Controls.Add(this.groupBoxVersion);
             this.Name = "Form1";
             this.Text = "通用软件自动更新系统 服务端 —— 杨宇庆 版权所有";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBoxVersion.ResumeLayout(false);
             this.groupBoxVersion.PerformLayout();
             this.groupBoxVersionList.ResumeLayout(false);
@@ -588,6 +602,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNowtime;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSavetime;
         private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.Button buttonInit;
     }
 }
 
