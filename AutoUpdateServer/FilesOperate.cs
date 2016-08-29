@@ -9,7 +9,7 @@ namespace AutoUpdateServer
 {
     public class FilesOperate
     {
-        
+        public string path;
 
     }
 }
