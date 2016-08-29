@@ -5,5 +5,11 @@
     <Setting Name="FileVersionXmlFileName" Type="System.String" Scope="User">
       <Value Profile="(Default)">FilesVersion.xml</Value>
     </Setting>
+    <Setting Name="NewVersionFolderName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">new</Value>
+    </Setting>
+    <Setting Name="RepositoryFolderName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Repository</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

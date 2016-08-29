@@ -31,7 +31,7 @@ namespace AutoUpdateServer
 
         private void buttonPublish_Click(object sender, EventArgs e)
         {
-            filesVersion.initXml();
+            filesVersion.SubmitNewVersion();
         }
 
         private void buttonInit_Click(object sender, EventArgs e)

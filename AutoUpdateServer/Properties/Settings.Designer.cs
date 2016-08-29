@@ -34,5 +34,29 @@ namespace AutoUpdateServer.Properties {
                 this["FileVersionXmlFileName"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("new")]
+        public string NewVersionFolderName {
+            get {
+                return ((string)(this["NewVersionFolderName"]));
+            }
+            set {
+                this["NewVersionFolderName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Repository")]
+        public string RepositoryFolderName {
+            get {
+                return ((string)(this["RepositoryFolderName"]));
+            }
+            set {
+                this["RepositoryFolderName"] = value;
+            }
+        }
     }
 }
